@@ -1,0 +1,263 @@
+"""
+Processador de dados - integra scraping e análise
+"""
+import os
+import json
+import logging
+import pandas as pd
+from typing import List, Dict, Any
+from datetime import datetime
+from src.models import FacebookPost, EquipmentAd
+from src.database import MongoDBPersistence
+
+logger = logging.getLogger(__name__)
+
+
+class DataProcessor:
+    """Processa e organiza dados de scraping e análise"""
+    
+    def __init__(self, data_dir: str = "data", use_mongodb: bool = True):
+        self.data_dir = data_dir
+        self.raw_dir = os.path.join(data_dir, "raw")
+        self.processed_dir = os.path.join(data_dir, "processed")
+        self.analyzed_dir = os.path.join(data_dir, "analyzed")
+        self.use_mongodb = use_mongodb
+        
+        # Criar diretórios (para backups)
+        os.makedirs(self.raw_dir, exist_ok=True)
+        os.makedirs(self.processed_dir, exist_ok=True)
+        os.makedirs(self.analyzed_dir, exist_ok=True)
+        
+        # Inicializar MongoDB se habilitado
+        if use_mongodb:
+            self.db = MongoDBPersistence()
+        else:
+            self.db = None
+    
+    def process_raw_scraping(self, raw_data: Dict[str, Any]) -> List[FacebookPost]:
+        """
+        Processa dados brutos do Apify em objetos FacebookPost
+        
+        Args:
+            raw_data: Dados brutos do scraping
+            
+        Returns:
+            Lista de FacebookPost
+        """
+        posts = []
+        items = raw_data.get("items", [])
+        
+        logger.info(f"Processando {len(items)} posts brutos")
+        
+        for item in items:
+            try:
+                # Pegar dados do sharedPost se existir
+                if "sharedPost" in item and item["sharedPost"]:
+                    shared = item["sharedPost"]
+                    text = shared.get("text", "")
+                    title = shared.get("title", "")
+                    location = shared.get("location", "")
+                    price = shared.get("price", "")
+                    attachments = shared.get("attachments", [])
+                else:
+                    text = item.get("text", "")
+                    title = item.get("title", "")
+                    location = item.get("location", "")
+                    price = item.get("price", "")
+                    attachments = item.get("attachments", [])
+                
+                # Extrair URLs de imagens
+                image_urls = []
+                for att in attachments:
+                    if att.get("__typename") == "Photo":
+                        if "photo_image" in att:
+                            image_urls.append(att["photo_image"]["uri"])
+                        elif "image" in att:
+                            image_urls.append(att["image"]["uri"])
+                
+                # Extrair comentários
+                comments = []
+                for comment in item.get("topComments", [])[:10]:
+                    if "text" in comment:
+                        comments.append({
+                            "text": comment["text"],
+                            "author": comment.get("author", {}).get("name", "Unknown")
+                        })
+                
+                post = FacebookPost(
+                    post_id=item.get("id") or item.get("legacyId", "unknown"),
+                    url=item.get("url", ""),
+                    time=item.get("time", ""),
+                    user_name=item.get("user", {}).get("name", "Unknown"),
+                    text=text,
+                    title=title,
+                    price=price,
+                    location=location,
+                    group_url=item.get("facebookUrl", ""),
+                    group_title=item.get("groupTitle", "Unknown Group"),
+                    likes_count=item.get("likesCount", 0),
+                    comments_count=item.get("commentsCount", 0),
+                    shares_count=item.get("sharesCount", 0),
+                    images=image_urls,
+                    comments=comments
+                )
+                
+                posts.append(post)
+                
+            except Exception as e:
+                logger.error(f"Erro ao processar item: {str(e)}")
+                continue
+        
+        logger.info(f"{len(posts)} posts processados com sucesso")
+        return posts
+    
+    def create_equipment_ads(
+        self,
+        posts: List[FacebookPost],
+        analyses: List[Dict[str, Any]]
+    ) -> List[EquipmentAd]:
+        """
+        Cria objetos EquipmentAd a partir de posts e análises
+        
+        Args:
+            posts: Lista de posts processados
+            analyses: Lista de análises da OpenAI
+            
+        Returns:
+            Lista de EquipmentAd
+        """
+        ads = []
+        
+        for post, analysis in zip(posts, analyses):
+            try:
+                ad = EquipmentAd.from_analysis(post, analysis)
+                ads.append(ad)
+            except Exception as e:
+                logger.error(f"Erro ao criar EquipmentAd: {str(e)}")
+                continue
+        
+        # Filtrar apenas anúncios verdadeiros
+        true_ads = [ad for ad in ads if ad.is_advertisement]
+        
+        logger.info(
+            f"Criados {len(true_ads)} anúncios de equipamentos "
+            f"de {len(ads)} posts analisados"
+        )
+        
+        return true_ads
+    
+    def save_analyzed_data(
+        self,
+        ads: List[EquipmentAd],
+        job_type: str = "incremental"
+    ) -> Dict[str, str]:
+        """
+        Salva dados analisados em JSON e CSV
+        
+        Args:
+            ads: Lista de anúncios
+            job_type: Tipo do job
+            
+        Returns:
+            Dicionário com caminhos dos arquivos salvos
+        """
+        timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        base_filename = f"{job_type}_{timestamp}"
+        
+        # Converter para dicionários
+        ads_data = [ad.to_dict() for ad in ads]
+        
+        # Salvar JSON
+        json_path = os.path.join(self.analyzed_dir, f"{base_filename}.json")
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(ads_data, f, ensure_ascii=False, indent=2)
+        
+        # Salvar CSV
+        csv_path = os.path.join(self.analyzed_dir, f"{base_filename}.csv")
+        df = pd.DataFrame(ads_data)
+        df.to_csv(csv_path, index=False, encoding='utf-8')
+        
+        # Salvar CSV resumido (apenas campos principais)
+        summary_cols = [
+            'post_id', 'equipment_type', 'brand', 'model', 'year', 
+            'size', 'price', 'condition', 'city', 'state', 
+            'has_repair', 'confidence_score'
+        ]
+        existing_cols = [col for col in summary_cols if col in df.columns]
+        df_summary = df[existing_cols]
+        
+        summary_path = os.path.join(
+            self.analyzed_dir, 
+            f"{base_filename}_summary.csv"
+        )
+        df_summary.to_csv(summary_path, index=False, encoding='utf-8')
+        
+        logger.info(f"Dados salvos:")
+        logger.info(f"  - JSON: {json_path}")
+        logger.info(f"  - CSV completo: {csv_path}")
+        logger.info(f"  - CSV resumido: {summary_path}")
+        
+        return {
+            "json": json_path,
+            "csv": csv_path,
+            "summary_csv": summary_path
+        }
+    
+    def generate_statistics(self, ads: List[EquipmentAd]) -> Dict[str, Any]:
+        """
+        Gera estatísticas sobre os anúncios
+        
+        Args:
+            ads: Lista de anúncios
+            
+        Returns:
+            Dicionário com estatísticas
+        """
+        if not ads:
+            return {"total_ads": 0}
+        
+        df = pd.DataFrame([ad.to_dict() for ad in ads])
+        
+        stats = {
+            "total_ads": len(ads),
+            "by_equipment_type": df['equipment_type'].value_counts().to_dict(),
+            "by_brand": df['brand'].value_counts().head(10).to_dict(),
+            "by_state": df['state'].value_counts().to_dict(),
+            "by_condition": df['condition'].value_counts().to_dict(),
+            "with_price": df['price'].notna().sum(),
+            "with_repair": df['has_repair'].sum(),
+            "avg_price": float(df['price'].mean()) if df['price'].notna().any() else None,
+            "median_price": float(df['price'].median()) if df['price'].notna().any() else None,
+            "price_range": {
+                "min": float(df['price'].min()) if df['price'].notna().any() else None,
+                "max": float(df['price'].max()) if df['price'].notna().any() else None
+            },
+            "avg_confidence": float(df['confidence_score'].mean())
+        }
+        
+        return stats
+    
+    def save_statistics(
+        self,
+        stats: Dict[str, Any],
+        job_type: str = "incremental"
+    ) -> str:
+        """
+        Salva estatísticas em arquivo JSON
+        
+        Args:
+            stats: Estatísticas
+            job_type: Tipo do job
+            
+        Returns:
+            Caminho do arquivo salvo
+        """
+        timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        filename = f"{job_type}_stats_{timestamp}.json"
+        filepath = os.path.join(self.analyzed_dir, filename)
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(stats, f, ensure_ascii=False, indent=2)
+        
+        logger.info(f"Estatísticas salvas em: {filepath}")
+        return filepath

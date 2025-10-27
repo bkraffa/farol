@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "url": "https://www.facebook.com/groups/1567230140156021",
+      "name": "Grupo Principal",
+      "active": true
+    },
+    {
+      "url": "https://www.facebook.com/groups/kitecumbuco",
+      "name": "Kite Cumbuco",
+      "active": true
+    }
+  ],
+  "apify_actor_id": "apify/facebook-groups-scraper",
+  "view_option": "CHRONOLOGICAL"
+}
