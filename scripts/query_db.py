@@ -49,6 +49,16 @@ def stats_command():
         print(f"\n📍 POR ESTADO:")
         for state, count in list(stats.get('by_state', {}).items())[:5]:
             print(f"  {state}: {count} anúncios")
+        
+        # Potencial de revenda (NOVO)
+        if stats.get('resale_potential'):
+            rp = stats['resale_potential']
+            print(f"\n🎯 POTENCIAL DE REVENDA:")
+            print(f"  Score médio: {rp['avg_score']}/100")
+            print(f"  Range: {rp['min_score']}-{rp['max_score']}")
+            print(f"  🔥 Alto (≥70): {rp['high_potential']} anúncios")
+            print(f"  👍 Médio (50-69): {rp['medium_potential']} anúncios")
+            print(f"  ⚠️  Baixo (<50): {rp['low_potential']} anúncios")
 
 
 def search_command(args):
@@ -100,9 +110,37 @@ def recent_command(hours=24):
             if ad.get('price'):
                 print(f"   R$ {ad['price']:.2f}")
             print(f"   {ad.get('city', 'N/A')}/{ad.get('state', 'N/A')}")
+            if ad.get('resale_score'):
+                emoji = "🔥" if ad['resale_score'] >= 70 else "👍" if ad['resale_score'] >= 50 else "⚠️"
+                print(f"   {emoji} Score: {ad['resale_score']}/100")
             analyzed = ad.get('analyzed_at')
             if analyzed:
                 print(f"   Analisado: {analyzed}")
+            print()
+
+
+def high_potential_command(min_score=70, equipment_type=None):
+    """Mostra anúncios com alto potencial de revenda"""
+    with get_db() as db:
+        results = db.get_high_potential_ads(
+            min_score=int(min_score),
+            equipment_type=equipment_type
+        )
+        
+        print(f"\n🔥 ALTO POTENCIAL (≥{min_score}): {len(results)}\n")
+        
+        for i, ad in enumerate(results, 1):
+            score = ad.get('resale_score', 0)
+            emoji = "🔥🔥🔥" if score >= 80 else "🔥🔥" if score >= 70 else "🔥"
+            
+            print(f"{i}. {emoji} {ad.get('brand', 'N/A')} {ad.get('model', 'N/A')} ({ad.get('year', 'N/A')})")
+            print(f"   Score: {score}/100")
+            print(f"   Tipo: {ad.get('equipment_type', 'N/A')} | Tamanho: {ad.get('size', 'N/A')}")
+            if ad.get('price'):
+                print(f"   Preço: R$ {ad['price']:.2f}")
+            print(f"   Local: {ad.get('city', 'N/A')}/{ad.get('state', 'N/A')}")
+            print(f"   Notas: {ad.get('resale_notes', 'N/A')}")
+            print(f"   URL: {ad.get('post_url', 'N/A')}")
             print()
 
 
@@ -146,6 +184,8 @@ COMANDOS:
   search [filters]          - Buscar anúncios
                               Ex: brand=Duotone type=kite max_price=5000
   recent [hours]            - Anúncios recentes (default: 24h)
+  potential [min_score]     - Anúncios com alto potencial de revenda
+                              Ex: potential 70, potential 80 type=kite
   text "<busca>"           - Busca por texto
   export <file> [query]     - Exportar para CSV
 
@@ -158,6 +198,12 @@ EXEMPLOS:
 
   # Anúncios das últimas 12 horas
   python scripts/query_db.py recent 12
+
+  # Alto potencial de revenda (score ≥ 70)
+  python scripts/query_db.py potential 70
+
+  # Kites com alto potencial
+  python scripts/query_db.py potential 80 type=kite
 
   # Busca por texto
   python scripts/query_db.py text "rebel sls 2024"
@@ -182,6 +228,15 @@ EXEMPLOS:
         elif command == 'recent':
             hours = sys.argv[2] if len(sys.argv) > 2 else 24
             recent_command(hours)
+        
+        elif command == 'potential' or command == 'high':
+            min_score = int(sys.argv[2]) if len(sys.argv) > 2 else 70
+            equipment_type = None
+            # Parse type=kite se fornecido
+            for arg in sys.argv[3:]:
+                if arg.startswith('type='):
+                    equipment_type = arg.split('=')[1]
+            high_potential_command(min_score, equipment_type)
         
         elif command == 'text':
             if len(sys.argv) < 3:

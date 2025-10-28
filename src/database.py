@@ -60,6 +60,7 @@ class MongoDBPersistence:
         self.db.equipment_ads.create_index([("brand", ASCENDING)])
         self.db.equipment_ads.create_index([("state", ASCENDING)])
         self.db.equipment_ads.create_index([("price", ASCENDING)])
+        self.db.equipment_ads.create_index([("resale_score", DESCENDING)])  # NOVO
         
         # Índice composto para queries comuns
         self.db.equipment_ads.create_index([
@@ -254,6 +255,41 @@ class MongoDBPersistence:
         logger.info(f"{len(ads)} anúncios nas últimas {hours} horas")
         return ads
     
+    def get_high_potential_ads(
+        self,
+        min_score: int = 70,
+        equipment_type: Optional[str] = None,
+        limit: int = 100
+    ) -> List[Dict]:
+        """
+        Busca anúncios com alto potencial de revenda
+        
+        Args:
+            min_score: Score mínimo (0-100)
+            equipment_type: Filtrar por tipo
+            limit: Limite de resultados
+            
+        Returns:
+            Lista de anúncios com alto potencial
+        """
+        query = {
+            'is_advertisement': True,
+            'resale_score': {'$gte': min_score}
+        }
+        
+        if equipment_type:
+            query['equipment_type'] = equipment_type
+        
+        ads = list(
+            self.db.equipment_ads
+            .find(query)
+            .sort('resale_score', DESCENDING)
+            .limit(limit)
+        )
+        
+        logger.info(f"{len(ads)} anúncios com score ≥ {min_score}")
+        return ads
+    
     def get_statistics(self) -> Dict[str, Any]:
         """
         Gera estatísticas do banco de dados
@@ -342,6 +378,46 @@ class MongoDBPersistence:
             'is_advertisement': True,
             'has_repair': True
         })
+        
+        # Estatísticas de potencial de revenda (NOVO)
+        pipeline_resale = [
+            {'$match': {
+                'is_advertisement': True,
+                'resale_score': {'$ne': None}
+            }},
+            {'$group': {
+                '_id': None,
+                'avg_score': {'$avg': '$resale_score'},
+                'min_score': {'$min': '$resale_score'},
+                'max_score': {'$max': '$resale_score'},
+                'high_potential': {
+                    '$sum': {'$cond': [{'$gte': ['$resale_score', 70]}, 1, 0]}
+                },
+                'medium_potential': {
+                    '$sum': {'$cond': [
+                        {'$and': [
+                            {'$gte': ['$resale_score', 50]},
+                            {'$lt': ['$resale_score', 70]}
+                        ]}, 1, 0
+                    ]}
+                },
+                'low_potential': {
+                    '$sum': {'$cond': [{'$lt': ['$resale_score', 50]}, 1, 0]}
+                }
+            }}
+        ]
+        
+        resale_stats = list(self.db.equipment_ads.aggregate(pipeline_resale))
+        if resale_stats:
+            rs = resale_stats[0]
+            stats['resale_potential'] = {
+                'avg_score': round(rs.get('avg_score', 0), 1),
+                'min_score': rs.get('min_score', 0),
+                'max_score': rs.get('max_score', 0),
+                'high_potential': rs.get('high_potential', 0),  # ≥70
+                'medium_potential': rs.get('medium_potential', 0),  # 50-69
+                'low_potential': rs.get('low_potential', 0)  # <50
+            }
         
         return stats
     

@@ -1,0 +1,551 @@
+{
+  "stats": {
+    "total": 3,
+    "ads": 3,
+    "non_ads": 0,
+    "errors": 0,
+    "with_multiple_items": 0,
+    "avg_confidence": 2.7,
+    "avg_resale_score": 151.0
+  },
+  "results": [
+    {
+      "post": {
+        "facebookUrl": "https://www.facebook.com/groups/kitecumbuco",
+        "url": "https://www.facebook.com/groups/kitecumbuco/permalink/25151015801232276/",
+        "time": "2025-10-27T23:51:41.000Z",
+        "user": {
+          "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l",
+          "name": "Daniel Oliveira"
+        },
+        "text": "Prancha Crazy Fly \nRAPTOR. \nPrancha impecável, construção em carbono. \nValor: R$ 3.500,00\n(85)999665375",
+        "topReactionsCount": 1,
+        "feedbackId": "ZmVlZGJhY2s6MjUxNTEwMTU4MDEyMzIyNzY=",
+        "reactionLikeCount": 1,
+        "id": "UzpfSTEwMDAxMjUzMjkwMjY4MTpWSzoyNTE1MTAxNTgwMTIzMjI3Ng==",
+        "legacyId": "25151015801232276",
+        "attachments": [
+          {
+            "mediaset_token": "pcb.25151015801232276",
+            "url": "https://www.facebook.com/media/set/?set=pcb.25151015801232276&type=1",
+            "comet_product_tag_feed_overlay_renderer": null
+          },
+          {
+            "thumbnail": "https://scontent.fsan1-2.fna.fbcdn.net/v/t39.30808-6/571231929_2255868668174208_7497074239758440711_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=RgaPivM5mIIQ7kNvwEfPvlS&_nc_oc=Adl2QCNmG3fb52aMy5shlaPNCADjnd0zBMJBjG7TyhcguVaokn8tlpIaPXde6GzsCmQ&_nc_zt=23&_nc_ht=scontent.fsan1-2.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfflWVZyRzAVAHPrMmO336lPCE7h0KZNrWP_YeKF_qXgaA&oe=6905DE6F",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent.fsan1-2.fna.fbcdn.net/v/t39.30808-6/571231929_2255868668174208_7497074239758440711_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=RgaPivM5mIIQ7kNvwEfPvlS&_nc_oc=Adl2QCNmG3fb52aMy5shlaPNCADjnd0zBMJBjG7TyhcguVaokn8tlpIaPXde6GzsCmQ&_nc_zt=23&_nc_ht=scontent.fsan1-2.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfflWVZyRzAVAHPrMmO336lPCE7h0KZNrWP_YeKF_qXgaA&oe=6905DE6F",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2255867508174324",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l"
+            },
+            "ocrText": "May be an image of surfboard and text"
+          },
+          {
+            "thumbnail": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571216890_2255868714840870_4629063860999226274_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=oZoOZgH2HmcQ7kNvwFnC2on&_nc_oc=AdmBZQ28RGVTBxN5n_LPs-EVCzCDVl1Sp--hfXsoqx7MjRvlSEY3pDElN_cqjN7KO4M&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfedO_pStQccHT8DSFguqHrgLuYeHlnAtMvZF5vsB1SNnw&oe=6906083F",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571216890_2255868714840870_4629063860999226274_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=oZoOZgH2HmcQ7kNvwFnC2on&_nc_oc=AdmBZQ28RGVTBxN5n_LPs-EVCzCDVl1Sp--hfXsoqx7MjRvlSEY3pDElN_cqjN7KO4M&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfedO_pStQccHT8DSFguqHrgLuYeHlnAtMvZF5vsB1SNnw&oe=6906083F",
+              "height": 443,
+              "width": 590
+            },
+            "id": "2255867571507651",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l"
+            },
+            "ocrText": "May be an image of text that says 'raptor EXPERIENCE FUTURE NOW. ユ37メ4ユ 4Z'"
+          },
+          {
+            "thumbnail": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571199634_2255868748174200_9153520768140560139_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_wsmLeSSFX4Q7kNvwGvEtdN&_nc_oc=AdlWlKLZJ9OhzCBrSoq0Ai6Bw7cQJsfT5dNNhYnmb6PGkusA6Ug6cUktUopbcDcolbU&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfcdyJgozrYZKyOsZxm_1NUAfTYXCf1eW8FqJ5eUnABPEg&oe=690607FC",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571199634_2255868748174200_9153520768140560139_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_wsmLeSSFX4Q7kNvwGvEtdN&_nc_oc=AdlWlKLZJ9OhzCBrSoq0Ai6Bw7cQJsfT5dNNhYnmb6PGkusA6Ug6cUktUopbcDcolbU&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfcdyJgozrYZKyOsZxm_1NUAfTYXCf1eW8FqJ5eUnABPEg&oe=690607FC",
+              "height": 443,
+              "width": 590
+            },
+            "id": "2255867648174310",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l"
+            },
+            "ocrText": "May be an image of hood ornament and text"
+          },
+          {
+            "thumbnail": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/572025024_2255868724840869_2529321687930801620_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=JM9Ft4dDEMcQ7kNvwFQj0fk&_nc_oc=AdlZfk73bF5ZaHW-dA6ZXzp6HM4v5v-zmO1em9ZAet9pW9ffqIQxsBUKTIeP9O9IGK0&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfcP0DPgOFKxWxve3TzLlQRvFfdmreELieRtjYaZnhjT_w&oe=6905F493",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/572025024_2255868724840869_2529321687930801620_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=JM9Ft4dDEMcQ7kNvwFQj0fk&_nc_oc=AdlZfk73bF5ZaHW-dA6ZXzp6HM4v5v-zmO1em9ZAet9pW9ffqIQxsBUKTIeP9O9IGK0&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AfcP0DPgOFKxWxve3TzLlQRvFfdmreELieRtjYaZnhjT_w&oe=6905F493",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2255867591507649",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l"
+            },
+            "ocrText": "May be an image of surfboard and text"
+          },
+          {
+            "thumbnail": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571329719_2255868681507540_8932130180244767109_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=IGYIW4hbRZMQ7kNvwHwMj2l&_nc_oc=AdknZNABKdEbdau4jAgSxa_N65UISrblg1RNzlZ29huF7j1GH8yYI9eABGAIi3rvwHo&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_Afd707Bs4AWhwqH3KmMsdBF831jCApo7QI7Lnyg1stdrQA&oe=6905EB6F",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent.fsan1-1.fna.fbcdn.net/v/t39.30808-6/571329719_2255868681507540_8932130180244767109_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=IGYIW4hbRZMQ7kNvwHwMj2l&_nc_oc=AdknZNABKdEbdau4jAgSxa_N65UISrblg1RNzlZ29huF7j1GH8yYI9eABGAIi3rvwHo&_nc_zt=23&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_Afd707Bs4AWhwqH3KmMsdBF831jCApo7QI7Lnyg1stdrQA&oe=6905EB6F",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2255867531507655",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0sjzdy5G6tC5zzdDWbdxHEap2rf8RVQuedwohfNGQAw79nfDEyRbLTCBJTLLZoRo6l"
+            },
+            "ocrText": "May be an image of surfboard and text that says '곡 e จวน crazyfly ኛ M に'"
+          }
+        ],
+        "likesCount": 1,
+        "sharesCount": 0,
+        "commentsCount": 1,
+        "topComments": [
+          {
+            "commentUrl": "https://www.facebook.com/groups/kitecumbuco/permalink/25151015801232276/?comment_id=25151291301204726",
+            "id": "Y29tbWVudDoyNTE1MTAxNTgwMTIzMjI3Nl8yNTE1MTI5MTMwMTIwNDcyNg==",
+            "feedbackId": "ZmVlZGJhY2s6MjUxNTEwMTU4MDEyMzIyNzZfMjUxNTEyOTEzMDEyMDQ3MjY=",
+            "date": "2025-10-28T00:33:24.000Z",
+            "text": "Onde esta",
+            "profileUrl": "https://www.facebook.com/artur.moura.75",
+            "profilePicture": "https://scontent.fsan1-1.fna.fbcdn.net/v/t1.6435-1/118606114_1739056316233894_8229004691765049279_n.jpg?stp=cp0_dst-jpg_s32x32_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ZuZ6DGKcCsAQ7kNvwEo85WA&_nc_oc=Adlcl7TWn_igmKZb_z7jCF703OUOzIyKJJ4DnxrluHvdjm82QH6kirhVBrDQ8j4QI5c&_nc_zt=24&_nc_ht=scontent.fsan1-1.fna&_nc_gid=OyERSMl0SUQzqKZINGAziA&oh=00_AffoO22jq3Nh1mTDHRazjPV2ipGEuWSAMpyr6B3xgCWiFg&oe=6927A539",
+            "profileId": "pfbid0nid2eMdPzidx3LR8WHmjnG2v4EMdt4q9qARZkuNeQ2ruRJUkJK7GYQwW1c5r9uDzl",
+            "profileName": "Artur Moura",
+            "likesCount": "0",
+            "threadingDepth": 0
+          }
+        ],
+        "facebookId": "342215395872327",
+        "groupTitle": "KITE Cumbuco Brazil",
+        "pageAdLibrary": {
+          "is_business_page_active": false,
+          "id": "519553511507057"
+        },
+        "inputUrl": "https://www.facebook.com/groups/kitecumbuco"
+      },
+      "analysis": {
+        "is_advertisement": true,
+        "confidence_score": 0.9,
+        "has_multiple_items": false,
+        "item_count": 1,
+        "equipment_type": "board",
+        "brand": "Crazy Fly",
+        "model": "Raptor",
+        "year": null,
+        "size": null,
+        "condition": "bom_estado",
+        "has_repair": false,
+        "repair_description": null,
+        "price": 3500.0,
+        "currency": "BRL",
+        "price_negotiable": false,
+        "city": null,
+        "state": null,
+        "description": "Prancha impecável, construção em carbono.",
+        "additional_items": [],
+        "additional_items_detailed": [],
+        "contact_info": "(85)999665375",
+        "contact_preferences": [
+          "WhatsApp"
+        ],
+        "extracted_from_text": true,
+        "extracted_from_images": true,
+        "extracted_from_comments": false,
+        "comment_interest_level": "medium",
+        "analysis_notes": "O post contém informações claras sobre a venda de uma prancha, incluindo preço e contato. O comentário é uma pergunta sobre a localização, indicando algum interesse.",
+        "keywords": [
+          "prancha",
+          "Crazy Fly",
+          "Raptor",
+          "venda",
+          "R$ 3500"
+        ],
+        "post_id": "UzpfSTEwMDAxMjUzMjkwMjY4MTpWSzoyNTE1MTAxNTgwMTIzMjI3Ng==",
+        "post_url": "https://www.facebook.com/groups/kitecumbuco/permalink/25151015801232276/",
+        "resale_score": {
+          "total_score": 47.0,
+          "classification": "❌ BAIXO - Não recomendado",
+          "factors": {
+            "brand_score": 19,
+            "price_score": 5.0,
+            "condition_score": 18,
+            "interest_score": 5.0
+          },
+          "recommendation": "Não recomendado para revenda no momento.",
+          "breakdown": "Brand: ███ 19.0/25\nPrice: █ 5.0/25\nCondition: ███ 18.0/25\nInterest: █ 5.0/25"
+        }
+      }
+    },
+    {
+      "post": {
+        "facebookUrl": "https://www.facebook.com/groups/1567230140156021",
+        "url": "https://www.facebook.com/groups/1567230140156021/permalink/4177905195755156/?sale_post_id=4177905195755156",
+        "time": "2025-10-28T01:03:47.000Z",
+        "user": {
+          "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl",
+          "name": "Giovana Pertuzzatti Rossatto"
+        },
+        "text": "Pouquíssimo uso.",
+        "topReactionsCount": 0,
+        "feedbackId": "ZmVlZGJhY2s6NDE3NzkwNTE5NTc1NTE1Ng==",
+        "id": "UzpfSTEwMDAxMjI2Njc5ODcwNjpWSzo0MTc3OTA1MTk1NzU1MTU2",
+        "legacyId": "4177905195755156",
+        "title": "Prancha Duotone 136 Jaime 2025",
+        "price": "R$6,000",
+        "location": "Caucaia, CE",
+        "attachments": [
+          {
+            "thumbnail": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572955579_2381637112255159_3769814275435004161_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=S3slXGlixhMQ7kNvwGa1mub&_nc_oc=AdlzldG4vCmVUMKuYN-V2DzoPIuO0TYVTVeExNhlnMnyZwmIOAckNBYbgICsXz8lN6g&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afc5rsGBlfoMLp9dWWxZq2E8OpPR6C6SWXE6NyqCOvsL7g&oe=6905D173",
+            "__typename": "Photo",
+            "photo_image": {
+              "height": 701,
+              "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572955579_2381637112255159_3769814275435004161_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=S3slXGlixhMQ7kNvwGa1mub&_nc_oc=AdlzldG4vCmVUMKuYN-V2DzoPIuO0TYVTVeExNhlnMnyZwmIOAckNBYbgICsXz8lN6g&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afc5rsGBlfoMLp9dWWxZq2E8OpPR6C6SWXE6NyqCOvsL7g&oe=6905D173",
+              "width": 526
+            },
+            "id": "2381637098921827",
+            "__isMedia": "Photo",
+            "accent_color": "FF7E2716",
+            "photo_product_tags": [],
+            "url": "https://www.facebook.com/photo.php?fbid=2381637098921827&set=gm.4177905192421823&type=3",
+            "ocrText": "May be an image of ‎skateboard, surfboard and ‎text that says '‎N ب = 2 z DJOT ۲ DJOT JIAIMIE A‎'‎‎"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572955579_2381637112255159_3769814275435004161_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=S3slXGlixhMQ7kNvwGa1mub&_nc_oc=AdlzldG4vCmVUMKuYN-V2DzoPIuO0TYVTVeExNhlnMnyZwmIOAckNBYbgICsXz8lN6g&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfcqRVa0Lppu7qqkNs36CBz15PK6vtu2wJWyFLra82MlxA&oe=6905D173",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572955579_2381637112255159_3769814275435004161_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=S3slXGlixhMQ7kNvwGa1mub&_nc_oc=AdlzldG4vCmVUMKuYN-V2DzoPIuO0TYVTVeExNhlnMnyZwmIOAckNBYbgICsXz8lN6g&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfcqRVa0Lppu7qqkNs36CBz15PK6vtu2wJWyFLra82MlxA&oe=6905D173",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381637098921827",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of ‎skateboard, surfboard and ‎text that says '‎N ب = 2 z DJOT ۲ DJOT JIAIMIE A‎'‎‎"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/548741576_2381637115588492_7858014768491086293_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=19unJWw5NTEQ7kNvwG7Ctg-&_nc_oc=AdndKbERbXF7QfPr0y3ddmrIznHyuSO16JG55NpLKE9GaUoCDIj3RLMNdTiMluMb1e8&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afdqnx9Uby6li6Fu-JjnslFb66BRbguZecIONRAK6WIGNQ&oe=6905DD83",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/548741576_2381637115588492_7858014768491086293_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=19unJWw5NTEQ7kNvwG7Ctg-&_nc_oc=AdndKbERbXF7QfPr0y3ddmrIznHyuSO16JG55NpLKE9GaUoCDIj3RLMNdTiMluMb1e8&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afdqnx9Uby6li6Fu-JjnslFb66BRbguZecIONRAK6WIGNQ&oe=6905DD83",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381637108921826",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of skateboard and text that says '41 TOM 136 WOODGORE e DIFFUSORROTTOM IFFUSORAO JAIMIE IDER WOODGORE 1> DUOTONE ព'"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/569046878_2381637118921825_2347828344165377585_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=aI8s2Tf10mQQ7kNvwHGkisw&_nc_oc=AdkzLSDf7aMBR3NuEyEoPf-qzRUaU0utlHnLf9xqiB1x4DkAKwzbB_wGyrx1strLLw0&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afdn_bG6pWBfhmNqAiiO2WeXGmJ1_7CANRJUB4wZa4EKfA&oe=6905F027",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/569046878_2381637118921825_2347828344165377585_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=aI8s2Tf10mQQ7kNvwHGkisw&_nc_oc=AdkzLSDf7aMBR3NuEyEoPf-qzRUaU0utlHnLf9xqiB1x4DkAKwzbB_wGyrx1strLLw0&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afdn_bG6pWBfhmNqAiiO2WeXGmJ1_7CANRJUB4wZa4EKfA&oe=6905F027",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381637102255160",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of surfboard and text"
+          }
+        ],
+        "likesCount": 0,
+        "sharesCount": 0,
+        "commentsCount": 0,
+        "topComments": [],
+        "facebookId": "1567230140156021",
+        "groupTitle": "Cumbuco Sell & Buy Kites",
+        "inputUrl": "https://www.facebook.com/groups/1567230140156021"
+      },
+      "analysis": {
+        "is_advertisement": true,
+        "confidence_score": 0.9,
+        "has_multiple_items": false,
+        "item_count": 1,
+        "equipment_type": "board",
+        "brand": "Duotone",
+        "model": "Jaime",
+        "year": 2025,
+        "size": "136",
+        "condition": "seminovo",
+        "has_repair": false,
+        "repair_description": null,
+        "price": 6000.0,
+        "currency": "BRL",
+        "price_negotiable": false,
+        "city": "Caucaia",
+        "state": "CE",
+        "description": "Pouquíssimo uso.",
+        "additional_items": [],
+        "additional_items_detailed": [],
+        "contact_info": null,
+        "contact_preferences": [],
+        "extracted_from_text": true,
+        "extracted_from_images": true,
+        "extracted_from_comments": false,
+        "comment_interest_level": "low",
+        "analysis_notes": "Post contém informações claras sobre o equipamento à venda, incluindo preço e descrição.",
+        "keywords": [
+          "prancha",
+          "Duotone",
+          "Jaime",
+          "2025",
+          "Caucaia",
+          "CE",
+          "R$6,000"
+        ],
+        "post_id": "UzpfSTEwMDAxMjI2Njc5ODcwNjpWSzo0MTc3OTA1MTk1NzU1MTU2",
+        "post_url": "https://www.facebook.com/groups/1567230140156021/permalink/4177905195755156/?sale_post_id=4177905195755156",
+        "resale_score": {
+          "total_score": 52.0,
+          "classification": "⭐ MÉDIO - Avaliar melhor",
+          "factors": {
+            "brand_score": 25,
+            "price_score": 5.0,
+            "condition_score": 22,
+            "interest_score": 0.0
+          },
+          "recommendation": "Atenção: preço elevado e baixo interesse. Avaliar com cuidado.",
+          "breakdown": "Brand: █████ 25.0/25\nPrice: █ 5.0/25\nCondition: ████ 22.0/25\nInterest:  0.0/25"
+        }
+      }
+    },
+    {
+      "post": {
+        "facebookUrl": "https://www.facebook.com/groups/1567230140156021",
+        "url": "https://www.facebook.com/groups/1567230140156021/permalink/4177904332421909/?sale_post_id=4177904332421909",
+        "time": "2025-10-28T01:02:22.000Z",
+        "user": {
+          "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl",
+          "name": "Giovana Pertuzzatti Rossatto"
+        },
+        "text": "Kite impecável, muito pouco uso.",
+        "topReactionsCount": 0,
+        "feedbackId": "ZmVlZGJhY2s6NDE3NzkwNDMzMjQyMTkwOQ==",
+        "id": "UzpfSTEwMDAxMjI2Njc5ODcwNjpWSzo0MTc3OTA0MzMyNDIxOTA5",
+        "legacyId": "4177904332421909",
+        "title": "Kite Duotone 2025 Evo 8 SLS",
+        "price": "R$7,500",
+        "location": "Caucaia, CE",
+        "attachments": [
+          {
+            "thumbnail": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/574076172_2381635115588692_6465508223498131076_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BHo6PaObBYgQ7kNvwH9hRBx&_nc_oc=AdmXLuEvg9oXwXOjQSukWntuP5G-pfDS5RpnLdHAswf-F5vDsz-YUeDojgYeQ9SNz-k&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afe7AqLgJgKD9K8CEwaV74xOkWaGz18InyXIsOgfp5mTXA&oe=6905E997",
+            "__typename": "Photo",
+            "photo_image": {
+              "height": 701,
+              "uri": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/574076172_2381635115588692_6465508223498131076_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BHo6PaObBYgQ7kNvwH9hRBx&_nc_oc=AdmXLuEvg9oXwXOjQSukWntuP5G-pfDS5RpnLdHAswf-F5vDsz-YUeDojgYeQ9SNz-k&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Afe7AqLgJgKD9K8CEwaV74xOkWaGz18InyXIsOgfp5mTXA&oe=6905E997",
+              "width": 526
+            },
+            "id": "2381635078922029",
+            "__isMedia": "Photo",
+            "accent_color": "FF342D11",
+            "photo_product_tags": [],
+            "url": "https://www.facebook.com/photo.php?fbid=2381635078922029&set=gm.4177904329088576&type=3",
+            "ocrText": "May be an image of tool bag and text that says 'DUOTONE 218 ReXBIM ENO FREERIDE FREESTLE SLS DUO ONE'"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/574076172_2381635115588692_6465508223498131076_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BHo6PaObBYgQ7kNvwH9hRBx&_nc_oc=AdmXLuEvg9oXwXOjQSukWntuP5G-pfDS5RpnLdHAswf-F5vDsz-YUeDojgYeQ9SNz-k&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AffY5Pt1wg2S52--1RAYC83LB6Df8Aim5Ul0GXrKg9e0kg&oe=6905E997",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/574076172_2381635115588692_6465508223498131076_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=BHo6PaObBYgQ7kNvwH9hRBx&_nc_oc=AdmXLuEvg9oXwXOjQSukWntuP5G-pfDS5RpnLdHAswf-F5vDsz-YUeDojgYeQ9SNz-k&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AffY5Pt1wg2S52--1RAYC83LB6Df8Aim5Ul0GXrKg9e0kg&oe=6905E997",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381635078922029",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of tool bag and text that says 'DUOTONE 218 ReXBIM ENO FREERIDE FREESTLE SLS DUO ONE'"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571256019_2381646825587521_7695424341125505871_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YHtExj6nInAQ7kNvwF38VAL&_nc_oc=AdkZugBhrytsNWLVJxmSA1tYkUbef4bVmzQoNVAjps6qPEmfw4bahuAAw80QbNKEY6Y&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Affx89LtJh_YoKf9Cu-C_lWytFBwh9XU_bcQo5VuMJdoGQ&oe=6905F123",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571256019_2381646825587521_7695424341125505871_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=YHtExj6nInAQ7kNvwF38VAL&_nc_oc=AdkZugBhrytsNWLVJxmSA1tYkUbef4bVmzQoNVAjps6qPEmfw4bahuAAw80QbNKEY6Y&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_Affx89LtJh_YoKf9Cu-C_lWytFBwh9XU_bcQo5VuMJdoGQ&oe=6905F123",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381647068920830",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "No photo description available."
+          },
+          {
+            "thumbnail": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571132767_2381646822254188_8244678884650980573_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GVbUwu-kSywQ7kNvwHA757h&_nc_oc=AdlVXAJOAX2WvPj6w6E91K-LgcOs5XMnTnKACfc0CMjSzDEcKhvNqaGPsUwinHreikg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfeL75Gqep8cGpu9V44Igcc2KHKzO0l20kAwNbjkIaGKkA&oe=6905E3F4",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571132767_2381646822254188_8244678884650980573_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GVbUwu-kSywQ7kNvwHA757h&_nc_oc=AdlVXAJOAX2WvPj6w6E91K-LgcOs5XMnTnKACfc0CMjSzDEcKhvNqaGPsUwinHreikg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfeL75Gqep8cGpu9V44Igcc2KHKzO0l20kAwNbjkIaGKkA&oe=6905E3F4",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381647015587502",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of tool bag and text"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571289845_2381646835587520_5383895933694583251_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=tiFmR7SA87wQ7kNvwFT3dW0&_nc_oc=AdmjEwzDMW10UOeMjDv-ybk0TccshcpDkOXVwi8gxq_szc4WCIVA6FHFythcYq2LSUg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfddTzbNf9Wzz_0oTDHxkhPrvaYWKZLSSfpDQYRLmcLOcQ&oe=6905D91D",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/571289845_2381646835587520_5383895933694583251_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=tiFmR7SA87wQ7kNvwFT3dW0&_nc_oc=AdmjEwzDMW10UOeMjDv-ybk0TccshcpDkOXVwi8gxq_szc4WCIVA6FHFythcYq2LSUg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfddTzbNf9Wzz_0oTDHxkhPrvaYWKZLSSfpDQYRLmcLOcQ&oe=6905D91D",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381646965587507",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of ‎text that says '‎El 0י 10 SLIS ብዮዝ ۲ IOTON JOTON DUOTONE‎'‎"
+          },
+          {
+            "thumbnail": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572172957_2381646828920854_3921374956932508461_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=MhLxTCIWYp0Q7kNvwELCUGC&_nc_oc=Adl8BfPIStBbijK4-ATz35FT6C8Oq1Li6_5rgJlLQD30SoATzKupbLuYvJMbVdsGIl8&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfdQ-R5WGoo4abq0KFnRQZmcjM3RUevIvTEuc_5AgBgN0Q&oe=6905FAC1",
+            "__typename": "Photo",
+            "is_playable": false,
+            "image": {
+              "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/572172957_2381646828920854_3921374956932508461_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=MhLxTCIWYp0Q7kNvwELCUGC&_nc_oc=Adl8BfPIStBbijK4-ATz35FT6C8Oq1Li6_5rgJlLQD30SoATzKupbLuYvJMbVdsGIl8&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=4U76aCR-8VnSVVUQtweEiw&oh=00_AfdQ-R5WGoo4abq0KFnRQZmcjM3RUevIvTEuc_5AgBgN0Q&oe=6905FAC1",
+              "height": 590,
+              "width": 443
+            },
+            "id": "2381647032254167",
+            "__isMedia": "Photo",
+            "photo_cix_screen": null,
+            "copyright_banner_info": null,
+            "owner": {
+              "__typename": "User",
+              "id": "pfbid0vwDPmZemZTsitLYuxGDXdjHBva7uWhXMAgSKUi5rmV8Prx1VCNTXYahG2yQuCLcYl"
+            },
+            "ocrText": "May be an image of text"
+          }
+        ],
+        "likesCount": 0,
+        "sharesCount": 0,
+        "commentsCount": 0,
+        "topComments": [],
+        "facebookId": "1567230140156021",
+        "groupTitle": "Cumbuco Sell & Buy Kites",
+        "inputUrl": "https://www.facebook.com/groups/1567230140156021"
+      },
+      "analysis": {
+        "is_advertisement": true,
+        "confidence_score": 0.9,
+        "has_multiple_items": false,
+        "item_count": 1,
+        "equipment_type": "kite",
+        "brand": "Duotone",
+        "model": "Evo",
+        "year": 2025,
+        "size": "8 SLS",
+        "condition": "seminovo",
+        "has_repair": false,
+        "repair_description": null,
+        "price": 7500.0,
+        "currency": "BRL",
+        "price_negotiable": false,
+        "city": "Caucaia",
+        "state": "CE",
+        "description": "Kite impecável, muito pouco uso.",
+        "additional_items": [],
+        "additional_items_detailed": [],
+        "contact_info": null,
+        "contact_preferences": [],
+        "extracted_from_text": true,
+        "extracted_from_images": true,
+        "extracted_from_comments": false,
+        "comment_interest_level": "low",
+        "analysis_notes": "Post contém informações claras sobre o equipamento e preço, mas não há informações de contato ou engajamento.",
+        "keywords": [
+          "Kite",
+          "Duotone",
+          "Evo",
+          "2025",
+          "R$7,500",
+          "Caucaia",
+          "CE"
+        ],
+        "post_id": "UzpfSTEwMDAxMjI2Njc5ODcwNjpWSzo0MTc3OTA0MzMyNDIxOTA5",
+        "post_url": "https://www.facebook.com/groups/1567230140156021/permalink/4177904332421909/?sale_post_id=4177904332421909",
+        "resale_score": {
+          "total_score": 52.0,
+          "classification": "⭐ MÉDIO - Avaliar melhor",
+          "factors": {
+            "brand_score": 25,
+            "price_score": 5.0,
+            "condition_score": 22,
+            "interest_score": 0.0
+          },
+          "recommendation": "Atenção: preço elevado e baixo interesse. Avaliar com cuidado.",
+          "breakdown": "Brand: █████ 25.0/25\nPrice: █ 5.0/25\nCondition: ████ 22.0/25\nInterest:  0.0/25"
+        }
+      }
+    }
+  ]
+}

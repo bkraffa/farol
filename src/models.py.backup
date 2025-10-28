@@ -52,10 +52,10 @@ class FacebookPost:
     def to_dict(self):
         return asdict(self)
 
+
 @dataclass
 class EquipmentAd:
     """Dados estruturados de um anúncio de equipamento"""
-    # === CAMPOS OBRIGATÓRIOS (sem default) ===
     # Identificação
     post_id: str
     post_url: str
@@ -66,66 +66,45 @@ class EquipmentAd:
     is_advertisement: bool
     confidence_score: float  # 0-1
     
-    # Equipamento principal
+    # Equipamento
     equipment_type: str  # EquipmentType
-    
-    # === CAMPOS OPCIONAIS (com default) ===
-    # Múltiplos itens
-    has_multiple_items: bool = False
-    item_count: int = 1
-    
-    # Detalhes do equipamento
-    brand: Optional[str] = None
-    model: Optional[str] = None
-    year: Optional[int] = None
-    size: Optional[str] = None # ex: "12m", "136x41cm"
-    condition: str = "desconhecido"  # EquipmentCondition
-    has_repair: bool = False
-    repair_description: Optional[str] = None
+    brand: Optional[str]
+    model: Optional[str]
+    year: Optional[int]
+    size: Optional[str]  # ex: "12m", "136x41cm"
+    condition: str  # EquipmentCondition
+    has_repair: bool
+    repair_description: Optional[str]
     
     # Preço e Localização
-    price: Optional[float] = None
+    price: Optional[float]
     currency: str = "BRL"
     price_negotiable: bool = False
-    city: Optional[str] = None
-    state: Optional[str] = None  # Sigla (CE, SP, RJ, etc)
+    city: Optional[str]
+    state: Optional[str]  # Sigla (CE, SP, RJ, etc)
     
     # Informações Adicionais
-    description: str = ""
-    additional_items: Optional[List[str]] = None  # Itens extras incluídos
-    additional_items_detailed: Optional[List[str]] = None  # Descrição detalhada de múltiplos itens
-    contact_info: Optional[str] = None
-    contact_preferences: Optional[List[str]] = None  # WhatsApp, telefone, etc
+    description: str
+    additional_items: List[str]  # Itens extras incluídos
+    contact_info: Optional[str]
+    contact_preferences: List[str]  # WhatsApp, telefone, etc
+    
+    # Potencial de Revenda (NOVO)
+    resale_score: Optional[int] = None  # 0-100
+    resale_notes: Optional[str] = None
     
     # Origem dos dados
-    extracted_from_text: bool = True
-    extracted_from_images: bool = False
-    extracted_from_comments: bool = False
-    
-    # Análise de engajamento
-    comment_interest_level: Optional[str] = None  # high, medium, low, negative
-    
-    # Score de revenda
-    resale_score: Optional[Dict[str, Any]] = None
+    extracted_from_text: bool
+    extracted_from_images: bool
+    extracted_from_comments: bool
     
     # Análise
-    analysis_notes: Optional[str] = None
-    keywords: Optional[List[str]] = None
+    analysis_notes: Optional[str]
+    keywords: List[str]
     
     # Dados do vendedor
-    seller_name: str = ""
-    seller_profile_url: Optional[str] = None
-    
-    def __post_init__(self):
-        """Inicializar campos de lista vazios"""
-        if self.additional_items is None:
-            self.additional_items = []
-        if self.additional_items_detailed is None:
-            self.additional_items_detailed = []
-        if self.contact_preferences is None:
-            self.contact_preferences = []
-        if self.keywords is None:
-            self.keywords = []
+    seller_name: str
+    seller_profile_url: Optional[str]
     
     def to_dict(self):
         return asdict(self)
@@ -134,7 +113,6 @@ class EquipmentAd:
     def from_analysis(cls, post: FacebookPost, analysis: Dict[str, Any]) -> 'EquipmentAd':
         """Cria um EquipmentAd a partir da análise da OpenAI"""
         return cls(
-            # Campos obrigatórios primeiro
             post_id=post.post_id,
             post_url=post.url,
             scraped_at=post.time,
@@ -142,9 +120,6 @@ class EquipmentAd:
             is_advertisement=analysis.get('is_advertisement', False),
             confidence_score=analysis.get('confidence_score', 0.0),
             equipment_type=analysis.get('equipment_type', EquipmentType.OTHER.value),
-            # Campos opcionais depois
-            has_multiple_items=analysis.get('has_multiple_items', False),
-            item_count=analysis.get('item_count', 1),
             brand=analysis.get('brand'),
             model=analysis.get('model'),
             year=analysis.get('year'),
@@ -159,14 +134,11 @@ class EquipmentAd:
             state=analysis.get('state'),
             description=analysis.get('description', post.text),
             additional_items=analysis.get('additional_items', []),
-            additional_items_detailed=analysis.get('additional_items_detailed', []),
             contact_info=analysis.get('contact_info'),
             contact_preferences=analysis.get('contact_preferences', []),
             extracted_from_text=analysis.get('extracted_from_text', True),
             extracted_from_images=analysis.get('extracted_from_images', len(post.images) > 0),
             extracted_from_comments=analysis.get('extracted_from_comments', len(post.comments) > 0),
-            comment_interest_level=analysis.get('comment_interest_level'),
-            resale_score=analysis.get('resale_score'),
             analysis_notes=analysis.get('analysis_notes'),
             keywords=analysis.get('keywords', []),
             seller_name=post.user_name,
